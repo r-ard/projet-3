@@ -3,4 +3,4 @@ node_modules/
 
 public/*
 
-/package-json.json
+/package-lock.json
