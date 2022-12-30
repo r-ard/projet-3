@@ -24,6 +24,7 @@ $fav-hover-color: #9356dc;
     &:hover {
         .fav-btn {
             opacity: 0;
+            cursor: pointer;
 
             &.hovered {
                 opacity: 1;

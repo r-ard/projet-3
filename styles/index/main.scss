@@ -61,6 +61,8 @@ main {
 
         .list {
             padding: 30px 13px;
+            padding-right: 0;
+            
             .item {
                 background-color: $fonctionnement-item-background;
                 display: flex;
@@ -71,6 +73,7 @@ main {
                 padding: 28px 30px;
                 border-radius: 20px;
                 transition: background-color 0.2s;
+                user-select: none;
 
                 .index-wrapper {
                     position: absolute;
@@ -207,6 +210,14 @@ main {
                     margin-right: 10px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    main {
+        .restaurants-wrapper, .fonctionnement-wrapper {
+            padding: 50px 50px!important;
         }
     }
 }
