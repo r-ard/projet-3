@@ -1,0 +1,28 @@
+@import "../index/header";
+
+$header-arrow-color: #353535;
+
+header > a {
+    position: absolute;
+    left: 5%;
+    text-decoration: none;
+    transition: transform 0.2s;
+    transform: translateX(0);
+
+    &:hover {
+        transform: translateX(-6px);
+    }
+
+    i {
+        font-size: 18px;
+        color: $header-arrow-color;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header > a {     
+        i {
+            font-size: 28px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 6px #aaa;
+    z-index: 1;
+    position: relative;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;   
+         
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+    }
+}

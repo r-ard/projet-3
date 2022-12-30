@@ -1,0 +1,33 @@
+$fav-hover-color: #9356dc;
+
+.fav-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+
+    .fav-btn {
+        font-size: 22px;
+        font-weight: 100;
+        transition: opacity 0.2s;
+        opacity: 1;
+
+        &.hovered {
+            position: absolute;
+            transition: opacity 0.2s;
+            opacity: 0;
+            z-index: 1;
+            left: 0;
+            color: $fav-hover-color;
+        }
+    }
+
+    &:hover {
+        .fav-btn {
+            opacity: 0;
+
+            &.hovered {
+                opacity: 1;
+            }
+        }
+    }
+}

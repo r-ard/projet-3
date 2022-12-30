@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "scripts": {
+    "build:index": "sass styles/index.scss public/index.css",
+    "build:restaurants": "sass styles/restaurant.scss public/restaurant.css",
+    "build": "yarn run build:index && yarn run build:restaurants"
+  }
+}
