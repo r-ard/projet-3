@@ -1,6 +1,4 @@
 node_modules/
 .vs_code/
 
-public/*
-
 /package-lock.json
