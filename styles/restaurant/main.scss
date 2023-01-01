@@ -281,10 +281,16 @@ main {
             .content-body {
                 .list {
                     .item {
-                        .item-body {
-                            .desc {
-                                .text {
+                        label {
+                            .item-body {
+                                .title {
                                     width: 100%!important;
+                                }
+
+                                .desc {
+                                    .text {
+                                        width: 100%!important;
+                                    }
                                 }
                             }
                         }
