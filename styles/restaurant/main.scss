@@ -4,8 +4,6 @@
 $content-background: #f7f7f7;
 $main-light-text: #353535;
 
-$title-divider-color: #99e2d0;
-
 main {
     position: relative;
 
@@ -70,7 +68,7 @@ main {
                 width: 40px;
                 height: 4px;
                 margin-top: 8px;
-                background-color: $title-divider-color;
+                background-color: $tertiary-color;
             }
     
             .list {
