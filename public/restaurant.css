@@ -398,6 +398,7 @@ footer .list .item a {
     flex-direction: column;
   }
 }
+/* Root Style */
 * {
   box-sizing: border-box;
   margin: 0;
