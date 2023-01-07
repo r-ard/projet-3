@@ -78,17 +78,25 @@ main {
     
                 .item {
                     width: 100%;
+
+                    width: 100%;
+                    display: inline-flex;
+                    flex-wrap: nowrap;
+                    position: relative;
+                    cursor: pointer;
+                    user-select: none;
+
                     animation-name: ItemAnim;
                     animation-duration: 0.75s;
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;
                     opacity: 0;
-                    transform: translateY(10px);
                     overflow: hidden;
                     box-shadow: 0 2px 8px #aaa;
                     background-color: #ffffff;
                     border-radius: 10px;
                     margin-bottom: 12px;
+                    transition: box-shadow 0.2s;
 
                     input {
                         display: none;
@@ -110,72 +118,65 @@ main {
                         margin-bottom: 0;
                     }
 
-                    label {
+                    .item-body {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
                         width: 100%;
-                        display: inline-flex;
-                        flex-wrap: nowrap;
-                        position: relative;
-                        cursor: pointer;
-                        user-select: none;
-    
-                        .item-body {
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: center;
-                            flex-direction: column;
+                        padding: 12px 8px;
+
+                        .title {
+                            width: 275px;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            text-align: start;
+                            overflow: hidden;
+                            transition: width 0.5s;
+                        }
+
+                        .desc {
                             width: 100%;
-                            padding: 12px 8px;
-    
-                            .title {
-                                width: 275px;
-                                font-weight: 600;
-                                margin-bottom: 10px;
-                                text-overflow: ellipsis;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .text {
                                 white-space: nowrap;
-                                text-align: start;
                                 overflow: hidden;
+                                text-overflow: ellipsis;
+                                text-align: start;
+                                width: 275px;
                                 transition: width 0.5s;
                             }
-    
-                            .desc {
-                                width: 100%;
-                                display: inline-flex;
-                                align-items: center;
-                                justify-content: space-between;
-    
-                                .text {
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    text-align: start;
-                                    width: 275px;
-                                    transition: width 0.5s;
-                                }
-    
-                                .price {
-                                    color: $main-light-text;
-                                    font-weight: 600;
-                                    padding-right: 8px;
-                                    padding-left: 4px;
-                                }
+
+                            .price {
+                                color: $main-light-text;
+                                font-weight: 600;
+                                padding-right: 8px;
+                                padding-left: 4px;
                             }
-                        }
-    
-                        .item-check {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            overflow: hidden;
-                            transition: margin-right 0.5s;
-                            color: #ffffff;
-                            background-color: #8fdec9;
-                            font-size: 28px;
-                            width: 72px;
-                            margin-right: -72px;
                         }
                     }
 
-                    & > input:checked + label {
+                    .item-check {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        transition: margin-right 0.5s;
+                        color: #ffffff;
+                        background-color: #8fdec9;
+                        font-size: 28px;
+                        width: 72px;
+                        margin-right: -72px;
+                    }
+
+                    &:hover, &:active, &:focus, &:focus-visible, &:focus-within {
+                        box-shadow: 0 2px 16px #aaa;
+
                         .item-body {
                             .title {
                                 width: 220px;
@@ -277,16 +278,14 @@ main {
             .content-body {
                 .list {
                     .item {
-                        label {
-                            .item-body {
-                                .title {
-                                    width: 100%!important;
-                                }
+                        .item-body {
+                            .title {
+                                width: 100%!important;
+                            }
 
-                                .desc {
-                                    .text {
-                                        width: 100%!important;
-                                    }
+                            .desc {
+                                .text {
+                                    width: 100%!important;
                                 }
                             }
                         }

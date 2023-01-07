@@ -189,17 +189,23 @@ main .content .content-body .list {
 }
 main .content .content-body .list .item {
   width: 100%;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
   animation-name: ItemAnim;
   animation-duration: 0.75s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   opacity: 0;
-  transform: translateY(10px);
   overflow: hidden;
   box-shadow: 0 2px 8px #aaa;
   background-color: #ffffff;
   border-radius: 10px;
   margin-bottom: 12px;
+  transition: box-shadow 0.2s;
 }
 main .content .content-body .list .item input {
   display: none;
@@ -216,15 +222,7 @@ main .content .content-body .list .item:nth-child(4) {
 main .content .content-body .list .item:last-child {
   margin-bottom: 0;
 }
-main .content .content-body .list .item label {
-  width: 100%;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-}
-main .content .content-body .list .item label .item-body {
+main .content .content-body .list .item .item-body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -232,7 +230,7 @@ main .content .content-body .list .item label .item-body {
   width: 100%;
   padding: 12px 8px;
 }
-main .content .content-body .list .item label .item-body .title {
+main .content .content-body .list .item .item-body .title {
   width: 275px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -242,13 +240,13 @@ main .content .content-body .list .item label .item-body .title {
   overflow: hidden;
   transition: width 0.5s;
 }
-main .content .content-body .list .item label .item-body .desc {
+main .content .content-body .list .item .item-body .desc {
   width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
 }
-main .content .content-body .list .item label .item-body .desc .text {
+main .content .content-body .list .item .item-body .desc .text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -256,13 +254,13 @@ main .content .content-body .list .item label .item-body .desc .text {
   width: 275px;
   transition: width 0.5s;
 }
-main .content .content-body .list .item label .item-body .desc .price {
+main .content .content-body .list .item .item-body .desc .price {
   color: #353535;
   font-weight: 600;
   padding-right: 8px;
   padding-left: 4px;
 }
-main .content .content-body .list .item label .item-check {
+main .content .content-body .list .item .item-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,16 +272,19 @@ main .content .content-body .list .item label .item-check {
   width: 72px;
   margin-right: -72px;
 }
-main .content .content-body .list .item > input:checked + label .item-body .title {
+main .content .content-body .list .item:hover, main .content .content-body .list .item:active, main .content .content-body .list .item:focus, main .content .content-body .list .item:focus-visible, main .content .content-body .list .item:focus-within {
+  box-shadow: 0 2px 16px #aaa;
+}
+main .content .content-body .list .item:hover .item-body .title, main .content .content-body .list .item:active .item-body .title, main .content .content-body .list .item:focus .item-body .title, main .content .content-body .list .item:focus-visible .item-body .title, main .content .content-body .list .item:focus-within .item-body .title {
   width: 220px;
 }
-main .content .content-body .list .item > input:checked + label .item-body .desc .text {
+main .content .content-body .list .item:hover .item-body .desc .text, main .content .content-body .list .item:active .item-body .desc .text, main .content .content-body .list .item:focus .item-body .desc .text, main .content .content-body .list .item:focus-visible .item-body .desc .text, main .content .content-body .list .item:focus-within .item-body .desc .text {
   width: 220px;
 }
-main .content .content-body .list .item > input:checked + label .item-check {
+main .content .content-body .list .item:hover .item-check, main .content .content-body .list .item:active .item-check, main .content .content-body .list .item:focus .item-check, main .content .content-body .list .item:focus-visible .item-check, main .content .content-body .list .item:focus-within .item-check {
   margin-right: 0;
 }
-main .content .content-body .list .item > input:checked + label .item-check i {
+main .content .content-body .list .item:hover .item-check i, main .content .content-body .list .item:active .item-check i, main .content .content-body .list .item:focus .item-check i, main .content .content-body .list .item:focus-visible .item-check i, main .content .content-body .list .item:focus-within .item-check i {
   animation-name: CheckAnim;
   animation-duration: 0.35s;
   animation-delay: 0.1s;
@@ -348,10 +349,10 @@ main .content .content-body .commande-wrapper button {
   main .content {
     flex: 40%;
   }
-  main .content .content-body .list .item label .item-body .title {
+  main .content .content-body .list .item .item-body .title {
     width: 100% !important;
   }
-  main .content .content-body .list .item label .item-body .desc .text {
+  main .content .content-body .list .item .item-body .desc .text {
     width: 100% !important;
   }
 }

@@ -112,13 +112,26 @@ main .location-wrapper {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-}
-main .location-wrapper span {
   color: #353535;
   font-weight: 600;
+  font-size: 16px;
 }
 main .location-wrapper span i {
   margin-right: 10px;
+  margin-left: 20px;
+}
+main .location-wrapper input {
+  color: #353535;
+  font-weight: 600;
+  font-size: 16px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  transition: font-size 0.2s;
+}
+main .location-wrapper input:focus, main .location-wrapper input:focus-visible {
+  border: 0 !important;
+  font-size: 18px;
 }
 main .explore-wrapper {
   background-color: #f7f7f7;
@@ -191,10 +204,10 @@ main .fonctionnement-wrapper .list .item .item-icon {
 main .fonctionnement-wrapper .list .item:last-child {
   margin-bottom: 0;
 }
-main .fonctionnement-wrapper .list .item:hover {
+main .fonctionnement-wrapper .list .item:hover, main .fonctionnement-wrapper .list .item:active, main .fonctionnement-wrapper .list .item:focus, main .fonctionnement-wrapper .list .item:focus-visible {
   background-color: #f5edff;
 }
-main .fonctionnement-wrapper .list .item:hover .item-icon {
+main .fonctionnement-wrapper .list .item:hover .item-icon, main .fonctionnement-wrapper .list .item:active .item-icon, main .fonctionnement-wrapper .list .item:focus .item-icon, main .fonctionnement-wrapper .list .item:focus-visible .item-icon {
   color: #9356dc;
 }
 main .restaurants-wrapper {
