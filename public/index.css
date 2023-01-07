@@ -118,7 +118,7 @@ main .location-wrapper {
 }
 main .location-wrapper span i {
   margin-right: 10px;
-  margin-left: 50px;
+  margin-left: 80px;
 }
 main .location-wrapper input {
   color: #353535;
@@ -128,6 +128,7 @@ main .location-wrapper input {
   padding: 0;
   background-color: transparent;
   transition: font-size 0.2s;
+  outline: none !important;
 }
 main .location-wrapper input:focus, main .location-wrapper input:focus-visible {
   border: 0 !important;
