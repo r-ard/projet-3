@@ -44,9 +44,14 @@ main {
         justify-content: center;
         align-items: center;
 
-        >*:not(:last-child) {
+        > * {
             margin-bottom: 20px;
             text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+                text-align: start;
+            }
         }
 
         span {
@@ -74,6 +79,7 @@ main {
                 border-radius: 20px;
                 transition: background-color 0.2s;
                 user-select: none;
+                margin-bottom: 20px;
 
                 .index-wrapper {
                     position: absolute;
@@ -106,8 +112,8 @@ main {
                     transition: color 0.2s;
                 }
 
-                &:not(:last-child) {
-                    margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
                 }
 
                 &:hover {
@@ -134,9 +140,10 @@ main {
                 box-shadow: 0 1px 10px #bbb;
                 transition: transform 0.3s, box-shadow 0.3s;
                 transform: translateY(0);
+                margin-bottom: 18px;
 
-                &:not(:last-child) {
-                    margin-bottom: 18px;
+                &:last-child {
+                    margin-bottom: 0;
                 }
 
                 &:hover {
@@ -149,32 +156,32 @@ main {
                     width: 100%;
                     color: #000000;
                     text-decoration: none;
-    
+
                     .minia {
                         width: 100%;
                         height: 175px;
                         object-fit: cover;
                     }
-    
-                    .content {
-                        padding: 12px 20px;
+                }
+
+                .content {
+                    padding: 12px 20px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+
+                    .details {
                         display: flex;
-                        position: relative;
-                        align-items: center;
-    
-                        .details {
-                            display: flex;
-                            flex-direction: column;
-                            flex: 1;
-    
-                            .name {
-                                font-weight: 600;
-                                margin-bottom: 4px;
-                            }
-    
-                            .location {
-                                font-weight: 100;
-                            }
+                        flex-direction: column;
+                        flex: 1;
+
+                        .name {
+                            font-weight: 600;
+                            margin-bottom: 4px;
+                        }
+
+                        .location {
+                            font-weight: 100;
                         }
                     }
                 }

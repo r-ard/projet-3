@@ -1,10 +1,17 @@
 {
   "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.57.1"
   },
   "scripts": {
     "build:index": "sass styles/index.scss public/index.css",
-    "build:restaurants": "sass styles/restaurant.scss public/restaurant.css",
-    "build": "yarn run build:index && yarn run build:restaurants"
+    "build:restaurant": "sass styles/restaurant.scss public/restaurant.css",
+    "autoprefix:index": "postcss public/index.css --use autoprefixer -d public/cleaned",
+    "autoprefix:restaurant": "postcss public/restaurant.css --use autoprefixer -d public/cleaned",
+    "build": "yarn run build:index && yarn run build:restaurant",
+    "autoprefix": "yarn run autoprefix:index && yarn run autoprefix:restaurant",
+    "compile": "yarn run build && yarn run autoprefix"
   }
 }

@@ -29,13 +29,17 @@ $fav-hover-color: #9356dc;
         }
     }
 
-    &:hover:not(&:has(input:checked)) {
-        .fav-btn:not(.hovered) {
+    &:hover > label {
+        .fav-btn {
             opacity: 0.8;
+
+            &.hovered {
+                opacity: 0;
+            }
         }
     }
 
-    &:has(input:checked) {
+    & > input:checked + label {
         .fav-btn {
             opacity: 0;
             cursor: pointer;
